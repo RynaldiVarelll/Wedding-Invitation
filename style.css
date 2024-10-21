@@ -1,0 +1,181 @@
+/* Global styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #fffae5, #ffecd2);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ffb6c1;
+    position: relative;
+    background: url('flower-bg.png') center/cover no-repeat;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #ff69b4;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Styling for Story Section */
+.story {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 240, 245, 0.9);
+    border-radius: 10px;
+    border: 2px solid #ff69b4;
+}
+
+.story h3 {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+.story p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Styling for Couple Photo Section */
+.couple-photo {
+    margin: 40px 0;
+}
+
+.couple-photo h3 {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+.couple-image {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 5px solid #ff69b4;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for Bank Info Section */
+.bank-info {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 224, 0.9);
+    border-radius: 10px;
+    border: 2px solid #ff69b4;
+}
+
+.bank-info h3 {
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+.bank-info p {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Animasi bunga */
+.flower-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.flower {
+    width: 60px;
+    height: 60px;
+    background: url('flower.png') no-repeat center center / cover;
+    position: absolute;
+    top: -100px;
+    animation: flower-fall 10s linear infinite;
+}
+
+.flower:nth-child(2) {
+    left: 20%;
+    animation-duration: 12s;
+    animation-delay: 1.5s;
+}
+
+.flower:nth-child(3) {
+    left: 70%;
+    animation-duration: 14s;
+    animation-delay: 2s;
+}
+
+@keyframes flower-fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Styling for RSVP Button */
+.rsvp-btn {
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.rsvp-btn:hover {
+    background: linear-gradient(45deg, #ff1493, #ff69b4);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Gaya untuk pesan sukses */
+#success-message {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 2rem;
+    color: #28a745; /* Warna hijau untuk sukses */
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none; /* Menyembunyikan pesan saat kelas 'hidden' diterapkan */
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Moch Justin Kheil & Maryanti Hong</h1>
+            <p>We are tying the knot and we want you to be part of our special day!</p>
+        </header>
+
+        <!-- Wedding Details Section -->
+        <section class="wedding-details">
+            <div class="details-box">
+                <h2>The Wedding Day</h2>
+                <p><strong>Date:</strong> October 26, 2024</p>
+                <p><strong>Venue:</strong> Aman Jiwa, Yogyakarta</p>
+                <p><strong>Time:</strong> 3:00 PM</p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story">
+            <h3>Our Story</h3>
+            <p>It all started with a cup of coffee at a small café. Justin and Maryanti met by coincidence, but soon realized they shared a lot in common. From there, their journey began, filled with laughter, love, and countless adventures.</p>
+        </section>
+
+        <!-- Photo of the Couple -->
+        <section class="couple-photo">
+            <h3>Photo of Us</h3>
+            <img src="couple.jpg" alt="Justin and Maryanti" class="couple-image">
+        </section>
+
+        <!-- Bank Account Information -->
+        <section class="bank-info">
+            <h3>Wedding Gift</h3>
+            <p>If you would like to contribute a gift, here is our bank account information:</p>
+            <p><strong>Bank Name:</strong> Bank Mega</p>
+            <p><strong>Account Number:</strong> 6648273</p>
+            <p><strong>Account Holder:</strong> Moch Justin Kheil</p>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="rsvp">
+            <h3>RSVP</h3>
+            <p>Please let us know if you will join us by October 26, 2024</p>
+            <p>"Please Click The Button To Reservation"</p>
+            <button class="rsvp-btn" onclick="showSuccessMessage()">RSVP Now</button>
+            <div id="success-message" class="hidden">RSVP Success!</div>
+        </section>
+    </div>
+
+    <!-- Flower Animation -->
+    <div class="flower-animation">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+    </div>
+
+    <script>
+        function showSuccessMessage() {
+            const successMessage = document.getElementById('success-message');
+    
+            // Tampilkan pesan
+            successMessage.classList.remove('hidden');
+    
+            // Animasi fade in
+            setTimeout(() => {
+                successMessage.style.opacity = 1;
+            }, 10); // Delay sedikit untuk trigger transition
+    
+            // Sembunyikan pesan setelah 3 detik
+            setTimeout(() => {
+                successMessage.style.opacity = 0;
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 500); // Delay sesuai durasi opacity
+            }, 3000); // Tampilkan selama 3 detik
+        }
+    </script>
+</body>
+</html>
